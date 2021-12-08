@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Counter App</title>
+  </head>
+  <body>
+    <div id="whole">
+      <h1>Counter App</h1>
+
+      <div id="counter">0</div>
+      <div class="buttons">
+        <div class="plus">
+          <button id="add">+</button>
+        </div>
+        <div class="again">
+          <button id="reset">Reset</button>
+        </div>
+        <div class="minus">
+          <button id="subtract">-</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      const counter = document.getElementById("counter");
+      const addBtn = document.getElementById("add");
+      const subtractBtn = document.getElementById("subtract");
+      const resetBtn = document.getElementById("reset");
+
+      let counterValue = 0;
+
+      addBtn.addEventListener("click", function (event) {
+        counterValue += 1;
+        counter.innerHTML = counterValue;
+      });
+      subtractBtn.addEventListener("click", function (event) {
+        counterValue -= 1;
+        counter.innerHTML = counterValue;
+      });
+      resetBtn.addEventListener("click", function (event) {
+        counterValue = 0;
+        counter.innerHTML = counterValue;
+      });
+    </script>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter JS</title>
+    <style>
+      main {
+        text-align: center;
+        padding: 200px;
+      }
+      button {
+        background-color: #000000;
+        color: #ffffff;
+        padding: 10px;
+        border: 2px solid #000000;
+        cursor: pointer;
+      }
+
+      #counter {
+        font-size: 50px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="counter">
+        0
+      </div>
+      <div class="buttons">
+        <button id="increment">Increment</button>
+        <button id="reset">Reset</button>
+        <button id="decrement">Decrement</button>
+      </div>
+    </main>
+
+    <script>
+      const counter = document.getElementById("counter");
+      const incrementBtn = document.getElementById("increment");
+      const decrementBtn = document.getElementById("decrement");
+      const resetBtn = document.getElementById("reset");
+
+      let counterValue = 0;
+
+      incrementBtn.addEventListener("click", function (event) {
+        counterValue += 1;
+        counter.innerHTML = counterValue;
+      });
+      decrementBtn.addEventListener("click", function (event) {
+        counterValue -= 1;
+        counter.innerHTML = counterValue;
+      });
+      resetBtn.addEventListener("click", function (event) {
+        counterValue = 0;
+        counter.innerHTML = counterValue;
+      });
+    </script>
+  </body>
+</html> -->
